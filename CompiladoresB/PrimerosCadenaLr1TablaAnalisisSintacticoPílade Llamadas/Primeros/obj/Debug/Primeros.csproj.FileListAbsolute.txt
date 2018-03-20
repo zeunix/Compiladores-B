@@ -1,0 +1,89 @@
+C:\Users\Omar\Documents\Primeros\Primeros\bin\Debug\Primeros.exe.config
+C:\Users\Omar\Documents\Primeros\Primeros\bin\Debug\Primeros.exe
+C:\Users\Omar\Documents\Primeros\Primeros\bin\Debug\Primeros.pdb
+C:\Users\Omar\Documents\Primeros\Primeros\obj\Debug\Primeros.Form1.resources
+C:\Users\Omar\Documents\Primeros\Primeros\obj\Debug\Primeros.Properties.Resources.resources
+C:\Users\Omar\Documents\Primeros\Primeros\obj\Debug\Primeros.csproj.GenerateResource.Cache
+C:\Users\Omar\Documents\Primeros\Primeros\obj\Debug\Primeros.csproj.CoreCompileInputs.cache
+C:\Users\Omar\Documents\Primeros\Primeros\obj\Debug\Primeros.exe
+C:\Users\Omar\Documents\Primeros\Primeros\obj\Debug\Primeros.pdb
+C:\Users\Omar\Documents\Primeros\Primeros\obj\Debug\Primeros.csprojResolveAssemblyReference.cache
+C:\Users\Omar\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\bin\Debug\Primeros.exe.config
+C:\Users\Omar\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\bin\Debug\Primeros.exe
+C:\Users\Omar\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\bin\Debug\Primeros.pdb
+C:\Users\Omar\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.csprojResolveAssemblyReference.cache
+C:\Users\Omar\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.Form1.resources
+C:\Users\Omar\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.Properties.Resources.resources
+C:\Users\Omar\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.csproj.GenerateResource.Cache
+C:\Users\Omar\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.csproj.CoreCompileInputs.cache
+C:\Users\Omar\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.exe
+C:\Users\Omar\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.pdb
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.csprojResolveAssemblyReference.cache
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.Form1.resources
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.Properties.Resources.resources
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.csproj.GenerateResource.Cache
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.csproj.CoreCompileInputs.cache
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.exe
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\obj\Debug\Primeros.pdb
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\bin\Debug\Primeros.exe.config
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\bin\Debug\Primeros.exe
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadena\Primeros\bin\Debug\Primeros.pdb
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintactico\Primeros\bin\Debug\Primeros.exe.config
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintactico\Primeros\bin\Debug\Primeros.exe
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintactico\Primeros\bin\Debug\Primeros.pdb
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintactico\Primeros\obj\Debug\Primeros.csprojResolveAssemblyReference.cache
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintactico\Primeros\obj\Debug\Primeros.Form1.resources
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintactico\Primeros\obj\Debug\Primeros.Properties.Resources.resources
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintactico\Primeros\obj\Debug\Primeros.csproj.GenerateResource.Cache
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintactico\Primeros\obj\Debug\Primeros.csproj.CoreCompileInputs.cache
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintactico\Primeros\obj\Debug\Primeros.exe
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintactico\Primeros\obj\Debug\Primeros.pdb
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.exe.config
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.exe
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.pdb
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.Form1.resources
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.Properties.Resources.resources
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csproj.GenerateResource.Cache
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csproj.CoreCompileInputs.cache
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.exe
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.pdb
+C:\Users\Omar .LAPTOP-HER8AR6V\Documents\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csprojResolveAssemblyReference.cache
+C:\Users\Omar .LAPTOP-HER8AR6V\Downloads\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.exe.config
+C:\Users\Omar .LAPTOP-HER8AR6V\Downloads\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.exe
+C:\Users\Omar .LAPTOP-HER8AR6V\Downloads\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.pdb
+C:\Users\Omar .LAPTOP-HER8AR6V\Downloads\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csprojResolveAssemblyReference.cache
+C:\Users\Omar .LAPTOP-HER8AR6V\Downloads\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.Form1.resources
+C:\Users\Omar .LAPTOP-HER8AR6V\Downloads\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.Properties.Resources.resources
+C:\Users\Omar .LAPTOP-HER8AR6V\Downloads\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csproj.GenerateResource.Cache
+C:\Users\Omar .LAPTOP-HER8AR6V\Downloads\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csproj.CoreCompileInputs.cache
+C:\Users\Omar .LAPTOP-HER8AR6V\Downloads\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.exe
+C:\Users\Omar .LAPTOP-HER8AR6V\Downloads\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.pdb
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.exe.config
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.exe
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.pdb
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csprojResolveAssemblyReference.cache
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.Form1.resources
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.Properties.Resources.resources
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csproj.GenerateResource.Cache
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csproj.CoreCompileInputs.cache
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.exe
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.pdb
+C:\Users\omar_\Documents\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.exe.config
+C:\Users\omar_\Documents\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.exe
+C:\Users\omar_\Documents\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.pdb
+C:\Users\omar_\Documents\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csprojResolveAssemblyReference.cache
+C:\Users\omar_\Documents\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.Form1.resources
+C:\Users\omar_\Documents\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.Properties.Resources.resources
+C:\Users\omar_\Documents\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csproj.GenerateResource.Cache
+C:\Users\omar_\Documents\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csproj.CoreCompileInputs.cache
+C:\Users\omar_\Documents\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.exe
+C:\Users\omar_\Documents\ValadezHernandezOmarAgustin\ValadezHernandezOmarAgustin\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.pdb
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.exe.config
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.exe
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\bin\Debug\Primeros.pdb
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.Form1.resources
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.Properties.Resources.resources
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csproj.GenerateResource.Cache
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csproj.CoreCompileInputs.cache
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.exe
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.pdb

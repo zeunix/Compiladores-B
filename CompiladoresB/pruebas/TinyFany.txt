@@ -1,0 +1,15 @@
+Programa-><Secuencia-Sent>
+Secuencia-Sent-><Secuencia-Sent>;<Sentencia>|<Sentencia>
+Sentencia-><Sent-if>|<Sent-Repeat>|<Sent-Assign>|<Sent-Read>|<Sent-Write>
+Sent-if->if<exp>then<Secuencia-Sent>end|if<exp>then<Secuencia-Sent>else<Secuencia-Sent>end
+Sent-Repeat->repeat<Secuencia-Sent>until<exp>
+Sent-Assign->identificador:=<exp>
+Sent-Read->readidentificador
+Sent-Write->write<exp>
+exp-><exp-simple><op-comparacion><exp-simple>|<exp-simple>
+op-comparacion->\<|=
+exp-simple-><exp-simple><opsuma><term>|<term>
+opsuma->+|-
+term-><term><opmult><factor>|<factor>
+opmult->*|/
+factor->(<exp>)|numero|identificador

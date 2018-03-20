@@ -1,0 +1,38 @@
+PROCESO -> ACCION-CORRECTIVA | ACCION-PREVENTIVA
+ACCION-PREVENTIVA -> ACCION OBJETO | ACCION OBJETO, ACCION-PREVENTIVA
+ACCION-CORRECTIVA -> OBJETO FALLA | OBJETO FALLA, ACCION-CORRECTIVA
+OBJETO -> a | b | c | d | e | f | g
+FALLA -> h | i | j | k | l | m | n
+ACCION -> o | p | q | r | s | t | u
+
+Donde:
+a -> La computadora
+b -> El monitor
+c -> El mouse
+d -> El teclado
+e -> El disco duro
+f -> Un programa
+g -> La unidad de CD/DVD
+
+h -> No enciente
+i -> No se mueve
+j -> No responde
+k -> Se calienta
+l -> No muestra imagen
+m -> No tiene sonido
+n -> No lee los discos
+
+o -> Respaldar
+p -> Liberar espacio
+q -> Desfragmentar
+r -> Limpiar
+s -> Desintalar
+t -> Instalar
+u -> Buscar virus en
+
+PROCESO -> ACCION-CORRECTIVA | ACCION-PREVENTIVA
+ACCION-PREVENTIVA -> ACCION OBJETO | ACCION OBJETO, ACCION-PREVENTIVA
+ACCION-CORRECTIVA -> OBJETO FALLA | OBJETO FALLA, ACCION-CORRECTIVA
+OBJETO -> La computadora | El monitor | El mouse | El teclado | El disco duro | Un programa | La unidad de CD/DVD
+FALLA -> No enciente | No se mueve | No responde | Se calienta | No muestra imagen | No tiene sonido | No lee los discos
+ACCION -> Respaldar | Liberar espacio | Desfragmentar | Limpiar | Desintalar | Instalar | Buscar virus en
