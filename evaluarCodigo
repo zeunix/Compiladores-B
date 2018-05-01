@@ -1,0 +1,329 @@
+ #region evaluarCodigo
++        /*************************************************************************
++         * Funcion que evalua un codigo de entrada y apila los tokens introducidos
++         * segun sea su tipo 
++         * ************************************************************************/
++        public bool evaluarExp(Dictionary<int, Dictionary<string, string>> tablaAnalisis)
++        {
++            string w = codigo;//cadena que cambiara y actualizara el codigo al evaluar un token 
++            codigo += ('$'); //se agrega el terminador a la cadena de entrada 
++            bool error = false;//bandera para terminar el ciclo por si ocurre un error 
++            bool r = false;
++
++            Dictionary<string, string> aux = tablaAnalisis[0];
++            Stack pila = new Stack();//pila de estados 
++            pila.Push(0);
++            int s, t;
++            int tamañoRemove = 0;
++            string accion = "";
++            StringBuilder stack = new StringBuilder("$0");
++            Token token = new Token();
++
++            while (codigo != null && !error && accion != "acc")
++            {
++                if (!r)
++                {
++                    if(token.Nombre=="switch")
++                    {
++                        int j = 0;
++                    }
++                    while (codigo[0] == ' ')
++                        codigo = codigo.Remove(0,1);
++                    token = getNextToken();//regresa el siguiente token a evaluar y modifica el la cadena de entrada 
++                    w = codigo;
++                    try
++                    {
++
++                        switch (token.Tipo)
++                        {
++                            case 0://numero
++                                colaNum.Enqueue(token);
++                                break;
++                            case 1://id
++                                colaId.Enqueue(token);
++                                break;
++                            case 2:
++                                if(token.Val==";")
++                                {
++                                    pilaOp.Push(token);
++                                }
++                                else if(token.Val=="case")
++                                {
++                                    pilaSint.Push(token);
++                                }
++                                else if(token.Val=="+" || token.Val=="-" || token.Val=="^" || token.Val=="*" || token.Val=="/")
++                                {
++                                    colaOpSuma.Enqueue(token);
++                                }
++                                else if (token.Val == "if" || token.Val == "else" || token.Val=="Var" || token.Val=="repeat" || token.Val=="switch")
++                                {
++                                    colaSintx.Enqueue(token);
++                                }
++                                else if (token.Val!="break" && token.Val !=":" && token.Val != "{" && token.Val != "}" && token.Val != "(" && token.Val != ")" && token.Val != "$" && token.Val != "endif" && token.Val != "endswitch" && token.Val!="until")
++                                {
++                                    colaOp.Enqueue(token);
++                                }
++                                break;
++                        }
++                    }
++                    catch (Exception e) { MessageBox.Show("No existe el token"); }
++                }
++                if (token != null)
++                {
++                    for (int id= 0;id < token.Nombre.Length;id++)
++                    {
++                        char a = token.Nombre[id];
++                        s = (int)pila.Peek();
++                        Dictionary<string, string> auxD = tablaAnalisis[s];
++                        if (auxD.ContainsKey(a.ToString()))
++                        {
++                            accion = auxD[a.ToString()];
++
++                            do
++                            {
++                                if (accion != "acc")
++                                {
++                                    switch (accion[0])
++                                    {
++                                        case 'd':
++                                            w = w.Remove(0, 1);
++                                            stack.Append(a);
++                                            tamañoRemove = 1;
++
++                                            string[] nu = accion.Split('d');
++                                            t = Convert.ToInt32(nu[1]);
++                                            tamañoRemove += nu[1].Length;
++                                            stack.Append(t);
++                                            pila.Push((int)t);
++                                            ListViewItem item = new ListViewItem(stack.ToString());
++                                            item.SubItems.Add(a.ToString());
++                                            item.SubItems.Add(w.ToString());
++                                            item.SubItems.Add(accion);
++                                            tablaAcciones.Items.Add(item);
++                                            r = false;
++                                            break;
++                                        case 'r':
++                                            r = true;
++                                            int num = 0;
++                                            string llave = "";
++                                            string st = "";
++                                            Tuple<int, string, string> num_llave_prod = getNum_Llave_prod(accion);
++                                            num = num_llave_prod.Item1;
++                                            llave = num_llave_prod.Item2;
++                                            st = num_llave_prod.Item3;
++
++                                            for (int i = 0; i < num; i++)
++                                                pila.Pop();
++
++                                            stack.Remove(stack.Length - tamañoRemove, tamañoRemove);
++                                            tamañoRemove = llave.Length;
++                                            ListViewItem item1 = new ListViewItem(stack.ToString());
++                                            item1.SubItems.Add(a.ToString());
++                                            item1.SubItems.Add(w.ToString());
++                                            item1.SubItems.Add(accion + "= " + st);
++                                            tablaAcciones.Items.Add(item1);
++                                            reducciones.Add(st);
++                                            if (pila.Count == 0)
++                                                t = 0;
++                                            else
++                                                t = (int)pila.Peek();
++                                            Dictionary<string, string> ir_a = tablaAnalisis[t];
++                                            if (ir_a.ContainsKey(llave))
++                                            {
++                                                int edo = Convert.ToInt32(ir_a[llave]);
++                                                pila.Push(edo);
++                                                stack.Append(llave);
++                                                stack.Append(edo);
++                                                ListViewItem item2 = new ListViewItem(stack.ToString());
++                                                item2.SubItems.Add(a.ToString());
++                                                item2.SubItems.Add(w.ToString());
++                                                item2.SubItems.Add(edo.ToString());
++                                                tablaAcciones.Items.Add(item2);
++                                                s = (int)pila.Peek();
++                                                tamañoRemove += ir_a[llave].Length;
++                                                id--;
++                                            }
++                                            else
++                                            {
++                                                error = true; break;
++                                            }
++                                            break;
++                                    }
++                                    break;
++                                }
++                                else
++                                {
++                                    error = false;
++                                }
++                            } while (accion[0] == 'r' && !error);
++                        }
++                        else { error = true; break; }
++                        if (error)
++                            break;
++
++                        if (accion == "acc")
++                        {
++                            ListViewItem item2 = new ListViewItem(stack.ToString());
++                            item2.SubItems.Add(a.ToString());
++                            item2.SubItems.Add(w.ToString());
++                            item2.SubItems.Add(accion);
++                            tablaAcciones.Items.Add(item2);
++                            break;
++                        }
++                    }
++
++                    codigo = w;
++                }
++                else
++                {
++                    error = true;
++                    break;
++                }
++            }
++            if (!error && accion == "acc")
++            {
++                return true;
++            }
++            else
++                return false;
++        }
++
++        private Tuple<int, string, string> getNum_Llave_prod(string accion)
++        {
++            int num = 0;
++            string llave = "";
++            string s = "";
++            foreach (string st in gramaticaSinOr)
++            {
++                string[] n = accion.Split('r');
++                int nm = Convert.ToInt32(n[1]);
++                if (gramaticaSinOr.IndexOf(st) + 1 == nm)
++                {
++                    int m = 0;
++                    for (; m < st.Length; m++)
++                    {
++                        if (!(st[m] == '-' && st[m + 1] == '>'))
++                        {
++                            llave += st[m];
++                        }
++                        else
++                            break;
++                    }
++                    m += 2;
++
++                    num = 0;
++                    bool y = false;
++                    //numero de elementos a reducir (num)
++                    //cuando encuentra un metacaracter no lo toma en cuenta y aumenta el contador 
++                    for (; m < st.Length; m++)
++                    {
++                        if (st[m] == '<' && !y)
++                        {
++                            num++;
++                            y = true;
++                        }
++                        else if (st[m] == '\\')
++                        {
++                            m++;
++                            num++;
++                        }
++                        else if (st[m] == '>')
++                        {
++                            y = false;
++                        }
++
++                        else if (terminales.Exists(x => x == st[m]) && !y)
++                            num++;
++                    }
++                    s = st;
++                    break;
++                }
++            }
++            Tuple<int, string, string> t = new Tuple<int, string, string>(num, llave, s);
++            return t;
++        }
++
++        #endregion
++         /****************************************************************
++         * Funcion que regresa un token, con sus atributos completos
++         * y analizados, retornara un null, si el token no existe o 
++         * tiene una sintaxis erronea
++         * **************************************************************/
++        private Token getNextToken()
++        {
++            //u0022(comilla doble)  circunflejo u005e        
++            Token token = new Token();
++            bool espacio = false;
++            int index;
++            //Expresion regular que separa por palabras las coincidencias y mantiene en su posicion las que no
++            string reservadas = @"(Main$|ImprimeTextBox$|LeeTextBox$|CreaBoton$|CreaTextbox$|CreaVentana$|def$|vent$|boton|textBox|\u005e|if$|\$|\(|\)|=|:=|;|,|\u0022.#\u0022$|Concat$|endif$|endswitch|endwhile|endfor|\{|\}|else$|" +
++                @"until|repeat|Var$|int$|float|string|char|switch|for|while|" +
++                @"stepnum$|initWindow|closeWindow|==|>|<|\+|-|\*|/|case|:|default|break|id$|num$)";
++
++            //lista de posibles tokens aun no tokenizados
++            List<string> tokenPrevios = new List<string>(Regex.Split(codigo, reservadas));
++            tokenPrevios.RemoveAll(x => x == "" || x==" ");
++      
++            string posibleVar = tokenPrevios.Find(x => x.IndexOf(x) == 0);//variable candidata como valor lexico del token
++            //quita espacios que puedan interferir en el analisis 
++            //de variables normales excepto cadenas 
++            if (posibleVar.Contains(' ') && !posibleVar.Contains("\""))
++            {
++                char[] c = new char[1];
++                c[0] = ' ';
++                string[] aux = posibleVar.Split(c, StringSplitOptions.RemoveEmptyEntries);
++                posibleVar = aux[0];
++                tokenPrevios.RemoveAt(0);
++                tokenPrevios.Insert(0, posibleVar);
++                if (aux.Length > 1)
++                    tokenPrevios.Insert(1, aux[1]);                
++                espacio = true;
++            }
++            Match match = Regex.Match(tokenPrevios.Find(x => x.IndexOf(x) == 0), reservadas);          
++           
++            if (match.Value !="")
++            {
++                if (palabraR.Exists(x => x == match.Value))//tokens de palabras reservadas tipo 2
++                {
++                    token = new Token(match.Value, 2);
++                    index = match.Index;
++                    //remueve el preToken del codigo e inserta el token ya analizado al codigo 
++                    if (espacio)
++                        codigo = codigo.Remove(index, match.Value.Length+1);
++                    else
++                        codigo = codigo.Remove(index, match.Value.Length);
++                    codigo = codigo.Insert(index, token.Val);
++                    return token;
++                }
++                else
++                    return null;                
++            }
++            else if(tokenPrevios.Count!=0)//tokens que pueden ser id o numeros
++            {
++
++                if (posibleVar.All(c => char.IsLetter(c)) || posibleVar.Contains('"') ||
++                    (posibleVar.Any(c => char.IsLetter(c)) && 
++                     posibleVar.Any(c => char.IsNumber(c))))
++                {
++                    token = new Token(posibleVar, 1);//token id tipo 1
++                }
++                else if (posibleVar.All(c => char.IsNumber(c)))
++                {
++                    token = new Token(posibleVar, 0);//token n tipo 0
++                }
++
++                index = 0;
++                //remueve el preToken del codigo e inserta el token ya analizado al codigo 
++                if (espacio)
++                    codigo = codigo.Remove(index, token.Val.Length + 1);
++                else
++                    codigo = codigo.Remove(index, posibleVar.Length);
++                codigo = codigo.Insert(index, token.Nombre);
++
++                return token;
++            }
++            else
++            {
++                return null;
++            }
++        } 
