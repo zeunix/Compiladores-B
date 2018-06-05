@@ -87,3 +87,4 @@ C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\Pri
 C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csproj.CoreCompileInputs.cache
 C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.exe
 C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.pdb
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\PrimerosCadenaLr1TablaAnalisisSintacticoPílade Llamadas\Primeros\obj\Debug\Primeros.csprojResolveAssemblyReference.cache

@@ -1141,6 +1141,8 @@ namespace Primeros
                                 if (s[l] == '~')
                                 {
                                     sr = s.Insert(l + 1, ".");
+                                    l = sr.IndexOf('~');
+                                    sr = sr.Remove(l, 1);
                                 }
 
                                 else
@@ -1312,6 +1314,7 @@ namespace Primeros
             automata.verificarEpsilon();
             int indice = 0;
             bool ci = false;
+            string produccionError;
             foreach (Estado e in automata.estados)
             {
                 listaB = new List<Elemento>();

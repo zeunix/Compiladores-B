@@ -11,7 +11,7 @@ namespace ProjectoCompiladoresB
         private string nombre;
         private string val;
         private int tipo;
-        public int indice;
+        public string valAsignado;
         public string Nombre { get { return nombre; } set { nombre = value; } }
         public string Val { get => val; set => val = value; }
         public int Tipo { get => tipo; set => tipo = value; }
@@ -30,7 +30,7 @@ namespace ProjectoCompiladoresB
             {
                 case 0:
                     tipo = 0;//int
-                    nombre = "n";
+                    nombre = "num";
                     break;                
                 case 1:
                     tipo = 1;//string

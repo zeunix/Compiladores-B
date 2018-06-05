@@ -1,4 +1,4 @@
-﻿Programa-><secuencia-sent>
+Programa-><secuencia-sent>
 secuencia-sent-><secuencia-sent>;<sentencia>
 secuencia-sent-><sentencia>|<def-funcion>
 sentencia-><sent-if>
@@ -9,15 +9,15 @@ sentencia-><sent-switch>
 sentencia-><sent-window>
 sentencia-><sent-for>
 sentencia-><sent-while>
-sentencia-><sent-concat>
-sent-concat->concatenar(id,<opconcat>)
+sentencia-><sent-button>
+sentencia-><sent-textBox>
 sent-if->if(<exp>){<secuencia-sent>}endif
 sent-if->if(<exp>){<secuencia-sent>}else{<secuencia-sent>}endif
 sent-repeat->repeat{<secuencia-sent>}until(<exp>)
-sent-assign->id:=<exp>
+sent-assign->id:=<exp>|id=<opconcat>
 opconcat-><opconcat>+<variable>|<variable>
 sent-declara->Var{<Tipo><identificadores>}
-identificadores-><identificadores>,<variable>|<variable>
+identificadores-><identificadores>,id|id
 Tipo->int|float|string|char
 exp-><exp-simple><op-comparacion><exp-simple>
 exp-><exp-simple>
@@ -46,7 +46,10 @@ sent-case-><cases>break;
 cases->case<num>:<secuencia-sent>|case<variable>:<secuencia-sent>
 sent-for->for(<variable>;<exp>;step<num>{<secuencia-sent>}endfor
 sent-while->while(<exp>){<secuencia-sent>}endwhile
-def-funcion->nombre()
+def-funcion->()
 sent-window->initWindow(<variable>,<tam-w>,<tam-w>)
 tam-w-><num>
+pos-xy->tam-w
 sent-window->closeWindow()
+sent-button->createButton(<variable>,<tam-w>,<tam-w>,<pos-xy>,<pos-xy>)
+sent-textBox->createTB(<tam-w>,<pos-xy>,<pos-xy>)

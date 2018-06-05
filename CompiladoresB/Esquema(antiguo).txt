@@ -1,0 +1,217 @@
+  private bool esquema_Traduccion()
+        {
+            tablaSimbolos = new Dictionary<string, string>();
+            Token t;
+            Nodo n;
+            Nodo b;
+            Nodo a;
+            Nodo c;
+            bool error = false;
+            foreach (string prod in reducciones)
+            {
+                if (!error)
+                {
+                    switch (prod)
+                    {
+                        case "variable->id":
+                            t = (Token)colaId.Dequeue();
+                            n = new Nodo(t);
+                            pilaArbol.Push(n);
+                            break;
+                        case "op-comparacion->\\>":
+                            t = (Token)colaOp.Dequeue();
+                            pilaOp.Push(t);
+                            break;
+                        case "op-comparacion->==":
+                            t = (Token)colaOp.Dequeue();
+                            pilaOp.Push(t);
+                            break;
+                        case "op-comparacion->\\<":
+                            t = (Token)colaOp.Dequeue();
+                            pilaOp.Push(t);
+                            break;
+                        case "num->n":
+                            t = (Token)colaNum.Dequeue();
+                            n = new Nodo(t);
+                            pilaArbol.Push(n);
+                            break;
+                        case "exp-><exp-simple><op-comparacion><exp-simple>":
+                            b = (Nodo)pilaArbol.Pop();
+                            a = (Nodo)pilaArbol.Pop();
+                            c = new Nodo((Token)pilaOp.Pop());
+                            if (Regex.IsMatch(c.token.Val, @"<|>|=="))
+                                error = creaBinario(a, c, b);
+                            else
+                            { error = true; }
+                            break;
+                        case "sent-assign->id:=<exp>":
+                            t = (Token)colaOp.Dequeue();
+                            c = new Nodo(t);
+                            if (Regex.IsMatch(t.Val, ":="))
+                            {
+                                a = new Nodo((Token)colaId.Dequeue());
+                                b = (Nodo)pilaArbol.Pop();
+                                error = creaBinario(a, c, b);
+                            }
+                            else
+                            { error = true; }
+                            break;
+                        case "sent-if->if(<exp>){<secuencia-sent>}endif":
+                            c = new Nodo((Token)colaSintx.Dequeue());//nodo if
+                            if (Regex.IsMatch(c.token.Val, "if"))
+                            {
+                                b = (Nodo)pilaArbol.Pop();
+                                a = (Nodo)pilaArbol.Pop();
+                                funcion_if_endif(a, c, b);
+                                error = false;
+                            }
+                            else
+                            { error = true; }
+                            break;
+                        case "sent-if->if(<exp>){<secuencia-sent>}else{<secuencia-sent>}endif":
+                            c = new Nodo((Token)colaSintx.Dequeue());//nodo if
+                            c.setDer(new Nodo((Token)colaSintx.Dequeue()));//rama if->else
+                            if (Regex.IsMatch(c.token.Val, "if") && Regex.IsMatch(c.der.token.Val, "else"))
+                            {
+                                c.der.setDer((Nodo)pilaArbol.Pop());//rama if->else->setencia
+                                b = (Nodo)pilaArbol.Pop();
+                                a = (Nodo)pilaArbol.Pop();
+                                error = funcion_if_else(a, c, b);
+                            }
+                            else { error = true; }
+                            break;
+                        case "sent-declara->Var{<Tipo><identificadores>}":
+                            t = (Token)colaSintx.Dequeue();
+                            b =(Nodo)pilaArbol.Pop();
+                            a =(Nodo)pilaArbol.Pop();                         
+                            error = funcion_Declara(a,new Nodo(t), b);
+                            break;
+                        case "identificadores-><identificadores>,<variable>":
+                            c = new Nodo((Token)colaOp.Dequeue());
+                            b = (Nodo)pilaArbol.Pop();
+                            a = (Nodo)pilaArbol.Pop();
+                            error = creaBinario(a, c, b);                            
+                            break;
+                        case "Tipo->int":
+                            t = (Token)colaOp.Dequeue();
+                            pilaArbol.Push(new Nodo(t));
+                            break;
+                        case "Tipo->char":
+                            t = (Token)colaOp.Dequeue();
+                            pilaArbol.Push(new Nodo(t));
+                            break;
+                        case "Tipo->string":
+                            t = (Token)colaOp.Dequeue();
+                            pilaArbol.Push(new Nodo(t));
+                            break;
+                        case "Tipo->float":
+                            t = (Token)colaOp.Dequeue();
+                            pilaArbol.Push(new Nodo(t));
+                            break;
+                        case "secuencia-sent-><secuencia-sent>;<sentencia>":
+                            t = (Token)pilaOp.Pop();
+
+                            if (Regex.IsMatch(t.Val, ";"))
+                            {
+                                c = new Nodo(t);
+                                b = (Nodo)pilaArbol.Pop();
+                                a = (Nodo)pilaArbol.Pop();
+                                error = creaBinario(a, c, b);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error de sintaxis");
+                                error = true;
+                            }
+                            break;
+                        case "exp-simple-><exp-simple><opsuma><term>":
+                            try
+                            {
+                                b = (Nodo)pilaArbol.Pop();
+                                c = (Nodo)pilaArbol.Pop();
+                                a = (Nodo)pilaArbol.Pop();
+                                
+                                if (c.token.Val== "+" || c.token.Val=="-" || c.token.Val=="/")
+                                {
+                                    error = creaBinario(a, c, b);
+                                }                                
+                            }
+                            catch(Exception e) { error = true; }
+                            break;
+                        case "opsuma->+":
+                            t = (Token)colaOpSuma.Dequeue();
+                            pilaArbol.Push(new Nodo(t));
+                            break;
+                        case "opsuma->-":
+                            t = (Token)colaOpSuma.Dequeue();
+                            pilaArbol.Push(new Nodo(t));
+                            break;
+                        case "term-><term><opmult><potencia>":
+                            try
+                            {
+                                b = (Nodo)pilaArbol.Pop();
+                                c = (Nodo)pilaArbol.Pop();
+                                a = (Nodo)pilaArbol.Pop();
+                                if (c.token.Val == "*" || c.token.Val == "/")
+                                    error = creaBinario(a, c, b);                                    
+                            }
+                            catch(Exception e) { error = true; }
+                            break;
+                        case "opmult->*":
+                            t = (Token)colaOpSuma.Dequeue();
+                            pilaArbol.Push(new Nodo(t));
+                            break;
+                        case "opmult->/":
+                            t = (Token)colaOpSuma.Dequeue();
+                            pilaArbol.Push(new Nodo(t));
+                            break;
+                        case "potencia-><potencia>^<factor>":
+                            b = (Nodo)pilaArbol.Pop();
+                            a = (Nodo)pilaArbol.Pop();
+                            c = new Nodo((Token)colaOpSuma.Dequeue());
+                            if (c.token.Val == "^")
+                                error = creaBinario(a, c, b);
+                            else
+                                error = true;
+                            break;
+                        case "sent-repeat->repeat{<secuencia-sent>}until(<exp>)":
+                            b = (Nodo)pilaArbol.Pop();
+                            a = (Nodo)pilaArbol.Pop();
+                            c = new Nodo((Token)colaSintx.Dequeue());
+                            error = creaBinario(a, c, b);
+                            break;
+                        case "cases->case<num>:<secuencia-sent>":
+                            b = (Nodo)pilaArbol.Pop();
+                            a = (Nodo)pilaArbol.Pop();
+                            c = new Nodo((Token)pilaSint.Pop());
+                            creaBinario(a, c, b);
+                            break;
+                        case "case<variable>:<secuencia-sent>":
+                            b = (Nodo)pilaArbol.Pop();
+                            a = (Nodo)pilaArbol.Pop();
+                            c = new Nodo((Token)pilaSint.Pop());
+                            error=creaBinario(a, c, b);
+                            break;
+                        case "sent-case-><cases>break;":
+                            c = new Nodo((Token)pilaOp.Pop());
+                            b = (Nodo)pilaArbol.Pop();
+                           // a = (Nodo)pilaArbol.Pop();
+                            error = lastCase(c, b);
+                            break;
+                        case "sent-case-><cases>break;<sent-case>":
+                            c = new Nodo((Token)pilaOp.Pop());
+                            b = (Nodo)pilaArbol.Pop();
+                            a = (Nodo)pilaArbol.Pop();
+                            error = creaBinario(b, c, a);
+                            break;
+                        case "sent-switch->switch(<variable>){<sent-sw>}endswitch":
+                            b = (Nodo)pilaArbol.Pop();
+                            a = (Nodo)pilaArbol.Pop();
+                            c = new Nodo((Token)colaSintx.Dequeue());
+                            error = creaBinario(a, c, b);
+                            break;
+                    } 
+                }
+            }
+            return error;
+        }

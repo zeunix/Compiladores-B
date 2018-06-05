@@ -18,3 +18,4 @@ C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\Pro
 C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\ProjectoCompiladoresB\ProjectoCompiladoresB\obj\Debug\ProjectoCompiladoresB.exe
 C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\ProjectoCompiladoresB\ProjectoCompiladoresB\obj\Debug\ProjectoCompiladoresB.pdb
 C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\ProjectoCompiladoresB\ProjectoCompiladoresB\obj\Debug\ProjectoCompiladoresB.csprojResolveAssemblyReference.cache
+C:\Users\omar_\OneDrive\Documentos\ValadezHernandezOmarAgustin\CompiladoresB\ProjectoCompiladoresB\ProjectoCompiladoresB\obj\Debug\ProjectoCompiladoresB.TablaANS.resources
