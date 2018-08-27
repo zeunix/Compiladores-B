@@ -612,6 +612,7 @@ namespace ProjectoCompiladoresB
             depuradorCuad.Rows.Clear();
             lC.Clear();
             indice = 0;
+            temp = 0;
          //   valorSimbolos.Clear();
             //expresion regular que separa espacios y saltos de linea y acomoda una cadena dejando los espacios en ella
             string patterTexto = @"\t|\r|\n";
@@ -720,7 +721,7 @@ namespace ProjectoCompiladoresB
 
                     switch (prod)
                     {
-                        case "sent-for->for(id=<const>:<const>,num){<secuencia-sent>}":
+                        case "sent-for->for(<variable>=<const>:<const>,num){<secuencia-sent>}":
                             Nodo sent = (Nodo)pilaArbol.Pop();//sentencia
                             b = new Nodo((Token)colaNum.Dequeue());
                             a = (Nodo)pilaArbol.Pop();
@@ -730,7 +731,7 @@ namespace ProjectoCompiladoresB
                             {
                                 Nodo aux1 = (Nodo)pilaArbol.Pop();
                                 b = (Nodo)pilaArbol.Pop();
-                                a = new Nodo((Token)colaId.Dequeue());
+                                a = (Nodo)pilaArbol.Pop();
                                 Nodo puntos = new Nodo((Token)pilaFor.Pop());
                                 c = new Nodo((Token)pilaFor.Pop());
                                 error = creaBinario(a, c, b);
@@ -924,13 +925,13 @@ namespace ProjectoCompiladoresB
                             else
                             { error = true; }
                             break;
-                        case "sent-assign->id:=<exp>;":
+                        case "sent-assign-><variable>:=<exp>;":
                             t = (Token)colaOp.Dequeue();
                             c = new Nodo(t);
                             if (Regex.IsMatch(t.Val, ":="))
                             {
-                                a = new Nodo((Token)colaId.Dequeue());
                                 b = (Nodo)pilaArbol.Pop();
+                                a = (Nodo)pilaArbol.Pop();
                                 error = creaBinario(a, c, b);
                             }
                             else
@@ -1389,6 +1390,7 @@ namespace ProjectoCompiladoresB
                         indice++;
                         lC.Add(c);
                         pilaResultados.Push(temporal);
+                        op1 = top1;
                         operadores = new Tuple<bool, string, string>(true, "", "");
                         break;
                     case "+":
@@ -1534,6 +1536,10 @@ namespace ProjectoCompiladoresB
                         lC.Add(c);
 
                         c = new Cuadruplo("+", aux1, top2, aux1);
+                        c.indx = indice;
+                        indice++;
+                        lC.Add(c);
+                        c = new Cuadruplo(":=", aux1, "", op1);
                         c.indx = indice;
                         indice++;
                         lC.Add(c);
@@ -2246,6 +2252,7 @@ namespace ProjectoCompiladoresB
             valorSimbolos = new Dictionary<string, string>();
             tablaSimGrid.Rows.Clear();
             tablaSimGrid.Rows.Clear();
+            temp = 0;
             foreach (var s in tablaSimbolos)
             {
                 dibujarSimbolos(s.Key, tablaSimbolos[s.Key], " ");
